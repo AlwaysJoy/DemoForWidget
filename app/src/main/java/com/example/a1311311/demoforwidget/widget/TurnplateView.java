@@ -119,7 +119,7 @@ public class TurnplateView extends SurfaceView implements SurfaceHolder.Callback
                         post(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getContext(), "恭喜!" + mResultStrs[(int) ((mCurrentAngle + 90) / mAngleOffset)], Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "恭喜!" + mResultStrs[(int) (mCurrentAngle / mAngleOffset)], Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
