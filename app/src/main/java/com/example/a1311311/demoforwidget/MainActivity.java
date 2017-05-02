@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.a1311311.demoforwidget.fragments.PlanetsFragment;
+import com.example.a1311311.demoforwidget.fragments.TurnplateFragment;
 import com.example.a1311311.demoforwidget.fragments.VatFragment;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private VatFragment mVatFragment;
     private ArrayList<Fragment> mFragmentList;
     private Fragment mCurrentFragment;
+    private Fragment mTurnplateFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         init();
         findViewById(R.id.btn_stars).setOnClickListener(this);
         findViewById(R.id.btn_vat).setOnClickListener(this);
+        findViewById(R.id.btn_turnplate).setOnClickListener(this);
     }
 
     private void init() {
         mFragmentList = new ArrayList<>();
         mPlanetsFragment = new PlanetsFragment();
         mVatFragment = new VatFragment();
+        mTurnplateFragment = new TurnplateFragment();
     }
 
     @OnClick({R.id.btn_stars,R.id.btn_vat})
@@ -45,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_vat:
                 changePage(mVatFragment);
+                break;
+            case R.id.btn_turnplate:
+                changePage(mTurnplateFragment);
                 break;
         }
     }
