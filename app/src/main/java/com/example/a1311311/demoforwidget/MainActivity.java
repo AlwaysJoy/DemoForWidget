@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mPlanetsFragment = new PlanetsFragment();
         mVatFragment = new VatFragment();
         mTurnplateFragment = new TurnplateFragment();
+
     }
 
     @OnClick({R.id.btn_stars,R.id.btn_vat})
